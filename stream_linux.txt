@@ -1,0 +1,31 @@
+Guia hecha por:
+	Juan Diego Torres
+	Oscar Uribe
+	Juan Esteban Sierra
+	Juan Jose Jurko
+
+Streaming udp linux
+1. instalar ffmpeg 
+	sudo apt-get ffmpeg
+
+2. correr un stream
+	ffmpeg -framerate ntsc -video_size 1920x1080 -f x11grab -i :0.0 -vcodec libx264 -crf 26 -preset fast -f mpegts udp://<ip-client:port>
+
+	ejemplo
+	ffmpeg -framerate ntsc -video_size 1920x1080 -f x11grab -i :0.0 -vcodec libx264 -crf 26 -preset fast -f mpegts udp://172.16.10.114:8080
+
+para recivir el stream
+por vlc:
+1. instalar vlc
+	sudo apt-get install vlc
+
+2. en vlc desde la maquina cliente
+	Media -> Open Network Stream (Crtl + N) 
+
+	poner en el cuadro de texto
+	udp://@<ip-cliente>:<puerto>
+
+	ejemplo:
+	udp://@172.16.10.114:8080
+
+
