@@ -1,0 +1,17 @@
+ffmpeg windows
+
+http://adaptivesamples.com/how-to-install-ffmpeg-on-windows/
+
+en el path copio el link donde esta ffmpeg
+
+
+
+ffmpeg -f dshow -i video="screen-capture-recorder" -r 30 -vcodec mpeg4 -q 12 -f mpegts udp://172.16.10.28:8080
+
+list device:
+ffmpeg -list_devices true -f dshow i -dummy
+
+
+instalar 
+https://sourceforge.net/projects/screencapturer/
+
