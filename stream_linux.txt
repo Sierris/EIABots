@@ -6,7 +6,11 @@ Guia hecha por:
 
 Streaming udp linux
 1. instalar ffmpeg 
-	sudo apt-get ffmpeg
+	En ubuntu 15.. en adelante
+		sudo apt-get ffmpeg
+	En ubuntu 14.04
+		sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+		sudo apt-get update && sudo apt-get install ffmpeg
 
 2. correr un stream
 	ffmpeg -framerate ntsc -video_size 1920x1080 -f x11grab -i :0.0 -vcodec libx264 -crf 26 -preset fast -f mpegts udp://<ip-client:port>
