@@ -14,7 +14,7 @@ Streaming udp linux
 	ejemplo
 	ffmpeg -framerate ntsc -video_size 1920x1080 -f x11grab -i :0.0 -vcodec libx264 -crf 26 -preset fast -f mpegts udp://172.16.10.114:8080
 
-para recivir el stream
+para recibir el stream
 por vlc:
 1. instalar vlc
 	sudo apt-get install vlc
